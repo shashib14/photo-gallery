@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>  
+    <div class="backbtn"><a href="#home" id="back">&#8592; BACK</a></div> 
+     <div class="header">
+         <h1>ILLUSTRATIONS WALLPAPER PHOTOS</h1>
+     </div>
+        <div id="row">
+            <img src="../images-set0/illustrations/vector_city.jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (1).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (2).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (3).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (4).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (5).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (6).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (7).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (8).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (9).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper.jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (10).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (11).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (12).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (13).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (14).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (15).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (16).jpg" loading="lazy">
+            <img src="../images-set0/illustrations/wallpaperflare.com_wallpaper (17).jpg" loading="lazy">      
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="download"><button onclick='downloadimg()'>download for free</button></div>
+        </div>
+
+
+        <script>
+            document.getElementById('back').onclick= function() {
+                window.history.back();
+            }
+            window.onload = function() {
+                var elem = document.querySelectorAll('img'); 
+               for(i=0 ; i<elem.length; i++) {
+                   elem[i].setAttribute('onClick', 'myfunc(this)');
+                }
+             }
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");         
+             function myfunc(heyy) {
+               modal.style.display = "block";
+               modalImg.src = heyy.src;
+             }
+             var span = document.getElementsByClassName("close")[0];
+             span.onclick = function() { 
+             modal.style.display = "none";
+             }
+         // save file button
+         function downloadimg() {
+             alert("sorry ,wallpapers are not available for download.\nPage will updated soon." );
+             }
+
+        </script>
+</body>
+</html>

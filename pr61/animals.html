@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body> 
+    <div class="backbtn"><a href="#home" id="back">&#8592; BACK</a></div> 
+     <div class="header">
+         <h1>ANIMAL WALLPAPER PHOTOS</h1>
+     </div>
+        <div id="row">
+            <img src="../images-set1/animals/animal01-cat.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal02-cat.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal03-dachshund.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal04-dog.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal05-dog.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal06-elephant.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal07-deer.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal08-fox.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal09-hedgehog-child.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal10-horses.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal11-koala.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal12-lion.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal13-lions.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal15-elephant.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal16-tiger.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal17-cheetha.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal18-tiger.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal19-wolf.jpg" loading="lazy">
+            <img src="../images-set1/animals/animal20-zebras.jpg" loading="lazy">
+            <img src="../images-set1/images-set1/animals/birds02.jpg" loading="lazy">
+            <img src="../images-set1/animals/birds02.jpg" loading="lazy">
+            <img src="../images-set1/animals/birds03.jpg" loading="lazy">
+            <img src="../images-set1/animals/birds04.jpg" loading="lazy">
+            <img src="../images-set1/animals/birds05.jpg" loading="lazy">       
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="download"><button onclick='downloadimg()'>download for free</button></div>
+        </div>
+
+
+        <script>
+            document.getElementById('back').onclick= function() {
+                window.history.back();
+            }
+            window.onload = function() {
+                var elem = document.querySelectorAll('img'); 
+               for(i=0 ; i<elem.length; i++) {
+                   elem[i].setAttribute('onClick', 'myfunc(this)');
+                }
+             }
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");         
+             function myfunc(heyy) {
+               modal.style.display = "block";
+               modalImg.src = heyy.src;
+             }
+             var span = document.getElementsByClassName("close")[0];
+             span.onclick = function() { 
+             modal.style.display = "none";
+             }
+         // save file button
+         function downloadimg() {
+             alert("sorry ,wallpapers are not available for download.\nPage will updated soon." );
+             }
+
+        </script>
+</body>
+</html>
